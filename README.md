@@ -27,7 +27,7 @@ docker-compose up
 ```
 
 3. Once the containers are running, you can navigate to the [Date-Time Web Application](http://localhost:7777/date) and verify that the return object is of JSON format. You can validate by inspecting the page and checking to see if the `Content-Type: application/json`.
-![Web-App](date-time-application-sc.png)
+![Web-App](images/date-time-application-sc.png)
 
 4. Example of using the test application (with screenshots) Navigate to http://localhost:8888/, will need to click back
 
