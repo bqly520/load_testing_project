@@ -1,0 +1,16 @@
+version: "3"
+services:
+  app:
+    container_name: date-time-api
+    build:
+      context: .
+      dockerfile: deployments/app/Dockerfile
+    ports: 
+      - "7777:7777"
+  test:
+    container_name: test-date-time-api
+    build:
+      context: .
+      dockerfile: deployments/test/Dockerfile
+    ports: 
+      - "8888:8888"
