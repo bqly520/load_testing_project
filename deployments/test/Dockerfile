@@ -2,9 +2,10 @@
 # python<name of the base image>: <tag of the image>
 from python:rc-alpine3.10
 # ENV and RUN is needed to set to the correct time zone
-# An alpine based image you have to install the tzdata first
+# An alpine based image you have to install the tzdata first since it is not install by default
 RUN apk add --no-cache tzdata
 ENV TZ=America/Los_Angeles
+# Creates a symlink to /usr/share/zoneinfo from /etc/localtime and appends TZ to /etc/timezone
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN pip install CherryPy
 RUN pip install requests
