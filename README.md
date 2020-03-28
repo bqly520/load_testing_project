@@ -30,7 +30,7 @@ docker-compose up
 ![Web-App](images/date-time-application-sc.png)
 
 4. Let's navigate to the [Test Application](http://localhost:8888/) to begin our load testing. Please enter any valid number to query the "API" X number of times and the results will be displayed.
-![Test-App](test-datetime-api-sc.png)
+![Test-App](images/test-datetime-api-sc.png)
 - `success`: The number of successful API calls
 - `failure`: The number of failed calls
 - `avg TTLB`: Gets the average `Time to Last Byte` of all *successful* API calls in seconds
