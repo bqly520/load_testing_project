@@ -3,13 +3,13 @@
 The objective of this project was to build an "API" that returns current date/time in a JSON format. Additionally, there will be a test application which queries the "API" X times per second which will record `success`, `failure`, `and TTLB(Time to Last Byte)`.
 
 ### Different Sections
-- [Instructions to run Application](#instructions-to-run-application)
+- [Instructions to run Web Application](#instructions-to-run-web-application)
 - [Docker Learning](#docker-learning)
 - [Python Libraries](#python-libraries)
     - [CherryPy](#cherrypy)
     - [Requests](#requests)
 
-### Instructions to run Application
+### Instructions to run Web Application
 
 1. Clone the repository to your local system and change directory into the project
 ```bash
@@ -19,14 +19,20 @@ cd load_testing_project
 
 2. Assuming that you already have Docker CLI installed, run the following command.
 ```bash
+# This command will first read the docker file and build the images
+# Then it will create and run two containers once they are ready
+# Note: the containers will both be created into a network called 'load_testing_project_default'
 docker-compose up
+# Can possibly go into more details about the Dockerfile maybe...?
 ```
 
-3. Example of hitting the API (with screenshots)
+3. Example of hitting the API (with screenshots) Navigate to http://localhost:7777/date
 
-4. Example of using the test application (with screenshots)
+4. Example of using the test application (with screenshots) Navigate to http://localhost:8888/, will need to click back
 
-5. Takeaways(?)
+5. `Caution:` Please do not run code seperately because even though both application are accessible, the test will fail because the container name is able to resolve the DNS since both containers are within the user-defined network. This capability is called `automatic service discovery`.
+
+6. Takeaways(?) TBC....
 
 ### Docker Learning
 ```bash
